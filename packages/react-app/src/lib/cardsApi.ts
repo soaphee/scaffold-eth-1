@@ -39,6 +39,8 @@ const instance = axios.create({
   baseURL: getAPIHostname(),
 })
 
+instance.defaults.headers.common['Authorization'] = "Bearer Token";
+
 /**
  * Global error handler:
  * Intercepts all axios reponses and maps
